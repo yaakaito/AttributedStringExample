@@ -21,13 +21,18 @@
     
     // yaakaito pushed to master at yaakaito/Specs
     NSAttributedString *name = [[NSAttributedString alloc] initWithString:@"yaakaito" attributes:@{NSForegroundColorAttributeName : [UIColor blueColor]}];
+    
     NSAttributedString *repository = [[NSAttributedString alloc] initWithString:@"yaakaito/Specs" attributes:@{NSForegroundColorAttributeName : [UIColor blueColor]}];
+    
     NSAttributedString *others = [[NSAttributedString alloc] initWithString:@" pushed to master at "];
+    
     NSMutableAttributedString *message = [[NSMutableAttributedString alloc] initWithAttributedString:name];
     [message appendAttributedString:others];
     [message appendAttributedString:repository];
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
     [self.view addSubview:label];
+    
     label.attributedText = message;
 }
 
